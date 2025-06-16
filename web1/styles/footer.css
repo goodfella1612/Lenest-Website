@@ -1,10 +1,9 @@
 .site-footer {
-    background-color: #3a855d;
+    background-color: #2d5a4a;
     background-image: none;
     background-repeat: repeat;
     background-size: auto;
 }
-
 
 .footer-cta-row {
     display: flex;
@@ -89,7 +88,7 @@
 
 .footer-left p, .footer-right p {
     margin: 0 0 14px 0;
-    color: #311f95;
+    color: #c8a882;
     font-size: 16px;
 }
 
@@ -127,7 +126,7 @@
 }
 
 .footer-links a {
-    color: #6b4b28;
+    color: #c8a882;
     text-decoration: none;
     transition: color 0.2s;
 }
