@@ -1,0 +1,127 @@
+
+.custom-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 24px 40px;
+    background: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 48px;
+    margin-right: 24px;
+}
+
+.main-nav a {
+    margin-right: 24px;
+    color: #333;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.main-nav a:last-child {
+    margin-right: 0;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  color: #222;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: none;
+  background: none;
+  border: none;
+  outline: none;
+  /* Ensures it matches the style of other links */
+  font-family: inherit;
+  margin-right: 24px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 32px;
+  background-color: #ffb36b;
+  min-width: 350px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  z-index: 1000;
+  padding: 20px 30px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  display: block;
+  color: #fff;
+  padding: 8px 0;
+  text-decoration: none;
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s;
+}
+
+.dropdown-content a:hover {
+  background: rgba(255,255,255,0.10);
+  color: #222;
+}
+
+.header-right {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 4px;
+}
+
+.header-btn {
+    background: #ffb36b;
+    color: #fff;
+    padding: 12px 36px;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: center;
+    transition: background 0.2s;
+}
+
+.header-btn:hover {
+    background: #ffa94d;
+}
+
+.header-btn.secondary {
+    margin-top: 6px;
+}
+
+@media (max-width: 900px) {
+    .custom-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+    .header-right {
+        flex-direction: row;
+        gap: 12px;
+        margin-top: 16px;
+    }
+}
