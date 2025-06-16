@@ -4,7 +4,7 @@
     position: relative;
     height: 100vh;
     min-height: 600px;
-    background: linear-gradient(rgba(45, 90, 74, 0.5), rgba(45, 90, 74, 0.5)), url('../images/hero-doctor-patient.jpg');
+    background: linear-gradient(rgba(45, 90, 74, 0.5), rgba(45, 90, 74, 0.5)), url('images/hero-doctor-patient.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
