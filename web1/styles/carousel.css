@@ -83,7 +83,7 @@
 }
 
 .card-button {
-    background: #c8a882;
+    background: #2d5a4a;
     color: #fff;
     border: none;
     padding: 12px 24px;
@@ -97,7 +97,7 @@
 }
 
 .card-button:hover {
-    background: #b8985f;
+    background: #1f3d32;
 }
 
 .carousel-controls {

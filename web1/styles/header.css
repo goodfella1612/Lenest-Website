@@ -3,7 +3,7 @@
     justify-content: space-between;
     align-items: flex-start;
     padding: 24px 40px;
-    background: #fff;
+    background: #2d5a4a;
     font-family: Arial, sans-serif;
 }
 
@@ -19,7 +19,7 @@
 
 .main-nav a {
     margin-right: 24px;
-    color: #333;
+    color: #fff;
     text-decoration: none;
     letter-spacing: 2px;
     font-size: 15px;
@@ -36,7 +36,7 @@
 }
 
 .dropbtn {
-  color: #222;
+  color: #fff;
   font-size: 15px;
   font-weight: 400;
   letter-spacing: 2px;
@@ -91,7 +91,7 @@
 }
 
 .header-btn {
-    background: #c8a882;
+    background: #2d5a4a;
     color: #fff;
     padding: 12px 36px;
     border: none;
@@ -105,7 +105,7 @@
 }
 
 .header-btn:hover {
-    background: #b8985f;
+    background: #1f3d32;
 }
 
 .header-btn.secondary {
