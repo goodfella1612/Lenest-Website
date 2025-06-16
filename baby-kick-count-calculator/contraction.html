@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contraction Calculator</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="contraction.css">
+</head>
+<body>
+
+  <h1>Contraction Calculator</h1>
+
+  <button onclick="startContraction()">Start Contraction</button>
+  <button onclick="stopContraction()">Stop Contraction</button>
+  <div id="status"></div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Start Time</th>
+        <th>End Time</th>
+        <th>Duration (sec)</th>
+        <th>Interval from Previous (min)</th>
+      </tr>
+    </thead>
+    <tbody id="contractionTable"></tbody>
+  </table>
+
+  <div id="message"></div>
+
+  <div id="chartContainer">
+    <canvas id="contractionChart" width="600" height="300"></canvas>
+  </div>
+
+  <script src="contraction.js"></script>
+</body>
+</html>

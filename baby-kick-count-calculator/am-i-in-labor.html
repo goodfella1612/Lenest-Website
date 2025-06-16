@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Am I In Labor?</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9f9f9; padding: 2em; }
+    h1 { color: #b20000; }
+    .question { margin-bottom: 1em; }
+    .hidden { display: none; }
+    button { padding: 0.5em 1em; background: #b20000; color: white; border: none; border-radius: 5px; }
+    #result { margin-top: 2em; font-size: 1.2em; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>🤰 Am I In Labor?</h1>
+  <form id="laborForm">
+    <div class="question">
+      <label>Has your water broken? (Did you notice a gush or trickle of fluid?)<br>
+        <input type="radio" name="preq1" value="yes"> Yes
+        <input type="radio" name="preq1" value="no"> No
+      </label>
+    </div>
+    <div class="question">
+      <label>Are you feeling intense pressure or the urge to push?<br>
+        <input type="radio" name="preq2" value="yes"> Yes
+        <input type="radio" name="preq2" value="no"> No
+      </label>
+    </div>
+    <div class="question">
+      <label>1. Are you experiencing regular contractions that are getting stronger and closer together?<br>
+        <input type="radio" name="q1" value="yes"> Yes
+        <input type="radio" name="q1" value="no"> No
+      </label>
+    </div>
+    <div class="question">
+      <label>2. Do the contractions persist even when you change positions or rest?<br>
+        <input type="radio" name="q2" value="yes"> Yes
+        <input type="radio" name="q2" value="no"> No
+      </label>
+    </div>
+    <div class="question">
+      <label>3. Are you having lower back pain or cramping that doesn't go away?<br>
+        <input type="radio" name="q3" value="yes"> Yes
+        <input type="radio" name="q3" value="no"> No
+      </label>
+    </div>
+    <div class="question">
+      <label>4. Have you noticed any bloody discharge or mucus (bloody show)?<br>
+        <input type="radio" name="q4" value="yes"> Yes
+        <input type="radio" name="q4" value="no"> No
+      </label>
+    </div>
+    <div class="question">
+      <label>5. Is this your due date or beyond?<br>
+        <input type="radio" name="q5" value="yes"> Yes
+        <input type="radio" name="q5" value="no"> No
+      </label>
+    </div>
+    <button type="button" onclick="checkLabor()">Check</button>
+  </form>
+  <div id="result"></div>
+  <script src="am-i-in-labor.js"></script>
+</body>
+</html>

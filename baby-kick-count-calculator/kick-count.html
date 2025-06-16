@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baby Kick Count Calculator</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9f9f9; padding: 20px; }
+    h2 { color: #2c3e50; }
+    form { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); max-width: 400px; margin: auto; }
+    label { display: block; margin: 10px 0 5px; }
+    input, button { width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px; }
+    #result { margin-top: 20px; background: #e8f8f5; padding: 15px; border-left: 5px solid #1abc9c; border-radius: 5px; }
+    @media (max-width: 480px) {
+      form { padding: 15px; max-width: 95%; }
+    }
+  </style>
+</head>
+<body>
+  <h2>Baby Kick Count Calculator</h2>
+  <p style="max-width: 600px; margin: auto; font-size: 0.9em; color: #555;">
+    <strong>Note:</strong> Ideally, you should feel 10 kicks within 2 hours. Try to monitor daily at a consistent time starting from the 28th week of pregnancy.
+  </p>
+  <form id="kickForm">
+    <label for="startTime">Start Time (HH:MM)</label>
+    <input type="time" id="startTime" required>
+    <label for="endTime">End Time (HH:MM)</label>
+    <input type="time" id="endTime" required>
+    <label for="movements">Number of Movements Felt</label>
+    <input type="number" id="movements" required>
+    <button type="submit">Calculate</button>
+  </form>
+  <div id="result"></div>
+  <script src="kick-count.js"></script>
+</body>
+</html>
