@@ -1,0 +1,47 @@
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    background: linear-gradient(rgba(45, 90, 74, 0.7), rgba(45, 90, 74, 0.7)), url('https://via.placeholder.com/1920x1080/2d5a4a/ffffff?text=Healthcare+Hero+Image');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+.hero-btn {
+    display: inline-block;
+    background: #fff;
+    color: #2d5a4a;
+    padding: 15px 40px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+    background: #2d5a4a;
+    color: #fff;
+    transform: translateY(-2px);
+}
