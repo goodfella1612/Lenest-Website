@@ -1,0 +1,147 @@
+
+.labor-service-container {
+    max-width: 800px;
+    margin: 100px auto 50px;
+    padding: 40px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.labor-service-container.wide {
+    max-width: 1000px;
+}
+
+.labor-service-container h1 {
+    color: #2d5a4a;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Form styles */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+/* Question styles for labor checker */
+.question {
+    margin-bottom: 25px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #2d5a4a;
+}
+
+.question label {
+    display: block;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.question input[type="radio"] {
+    margin-right: 8px;
+    margin-left: 15px;
+}
+
+/* Button styles */
+.submit-btn {
+    background: #2d5a4a;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background: #1e3d2f;
+}
+
+/* Controls for contraction calculator */
+.controls {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.controls button {
+    background: #2d5a4a;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.controls button:hover {
+    background: #1e3d2f;
+}
+
+/* Status and message styles */
+#status {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 18px;
+    color: #2d5a4a;
+}
+
+#message {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Result styles */
+#result {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    background: #f8f9fa;
+    border-left: 4px solid #2d5a4a;
+}
+
+/* Table styles for contraction calculator */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+table th {
+    background: #2d5a4a;
+    color: white;
+}
+
+/* Chart container */
+#chartContainer {
+    margin-top: 30px;
+}
