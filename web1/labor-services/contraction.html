@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contraction Calculator - Le Nest</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .labor-service-container {
+            max-width: 1000px;
+            margin: 100px auto 50px;
+            padding: 40px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        .labor-service-container h1 {
+            color: #2d5a4a;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .controls {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .controls button {
+            background: #2d5a4a;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 0 10px;
+        }
+        .controls button:hover {
+            background: #1e3d2f;
+        }
+        #status {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 18px;
+            color: #2d5a4a;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+        table th {
+            background: #2d5a4a;
+            color: white;
+        }
+        #message {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        #chartContainer {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header class="custom-header">
+        <div class="header-left">
+            <img src="../images/lenest_logo.png" alt="Le Nest" class="logo">
+            <nav class="main-nav">
+                <a href="../index.html">HOME</a>
+                <a href="#">PATIENT INFO</a>
+                <a href="#">LOCATION</a>
+                <div class="dropdown">
+                    <span class="dropbtn">SERVICES</span>
+                    <div class="dropdown-content">
+                        <a href="#">GYNAECOLOGY & OBSTETRIC CARE</a>
+                        <a href="#">PEDIATRIC CARE</a>
+                        <a href="#">PHYSIOTHERAPY</a>
+                        <a href="#">HYPNOBIRTHING</a>
+                        <a href="#">ANTENATAL CLASSES</a>
+                        <a href="#">RELATIONSHIP ENHANCEMENT PROGRAM</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <span class="dropbtn">LABOR SERVICES</span>
+                    <div class="dropdown-content">
+                        <a href="kick-count.html">BABY KICK COUNT CALCULATOR</a>
+                        <a href="contraction.html">CONTRACTION CALCULATOR</a>
+                        <a href="am-i-in-labor.html">AM I IN LABOR?</a>
+                    </div>
+                </div>
+                <a href="#">FAQS</a>
+                <a href="#">EMERGENCY!</a>
+            </nav>
+        </div>
+        <div class="header-right">
+            <a href="#" class="header-btn">BOOK AN APPOINTMENT</a>
+        </div>
+    </header>
+
+    <div class="labor-service-container">
+        <h1>Contraction Calculator</h1>
+        
+        <div class="controls">
+            <button onclick="startContraction()">Start Contraction</button>
+            <button onclick="stopContraction()">Stop Contraction</button>
+        </div>
+        
+        <div id="status"></div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Start Time</th>
+                    <th>End Time</th>
+                    <th>Duration (sec)</th>
+                    <th>Interval from Previous (min)</th>
+                </tr>
+            </thead>
+            <tbody id="contractionTable"></tbody>
+        </table>
+
+        <div id="message"></div>
+
+        <div id="chartContainer">
+            <canvas id="contractionChart" width="600" height="300"></canvas>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-cta-row">
+            <button class="footer-cta">BOOK YOUR APPOINTMENT ONLINE</button>
+        </div>
+        <div class="footer-content">
+            <div class="footer-left">
+                <div class="footer-contact">
+                    <h3>Le Nest Hospital</h3>
+                    <p>Laxmi palace,Opp Sunder Nagar<br>
+                        Off S V Road, Near Witty International School<br>
+                        Malad W, Mumbai 400064</p>
+                    <p><strong>Phone:</strong><br>
+                        +91 7045340141<br>
+                        +91 8104516661 </p>
+                    <p><strong>Email:</strong><br>
+                        lenest.india@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-right">
+                <h3>Hours:</h3>
+                <p>Monday 8am–4pm<br>
+                    Tuesday 8am–4pm<br>
+                    Wednesday 8am–4pm<br>
+                    Thursday 8am–4pm<br>
+                    Friday 8am–4pm<br>
+                    Saturday Closed<br>
+                    Sunday Closed</p>
+            </div>
+        </div>
+        <div class="footer-social">
+            <a href="#"><img src="../images/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="../images/twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="../images/youtube.png" alt="Youtube"></a>
+        </div>
+        <div class="footer-links">
+            <a href="#">INSURANCE OPTIONS</a>
+            <a href="#">NEWS</a>
+            <a href="#">PLANS</a>
+        </div>
+    </footer>
+
+    <script src="contraction.js"></script>
+</body>
+</html>

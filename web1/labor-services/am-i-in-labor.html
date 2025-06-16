@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Am I In Labor? - Le Nest</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <style>
+        .labor-service-container {
+            max-width: 800px;
+            margin: 100px auto 50px;
+            padding: 40px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        .labor-service-container h1 {
+            color: #2d5a4a;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .question {
+            margin-bottom: 25px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #2d5a4a;
+        }
+        .question label {
+            display: block;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .question input[type="radio"] {
+            margin-right: 8px;
+            margin-left: 15px;
+        }
+        .submit-btn {
+            background: #2d5a4a;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .submit-btn:hover {
+            background: #1e3d2f;
+        }
+        #result {
+            margin-top: 30px;
+            padding: 20px;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            background: #f8f9fa;
+            border-left: 4px solid #2d5a4a;
+        }
+    </style>
+</head>
+<body>
+    <header class="custom-header">
+        <div class="header-left">
+            <img src="../images/lenest_logo.png" alt="Le Nest" class="logo">
+            <nav class="main-nav">
+                <a href="../index.html">HOME</a>
+                <a href="#">PATIENT INFO</a>
+                <a href="#">LOCATION</a>
+                <div class="dropdown">
+                    <span class="dropbtn">SERVICES</span>
+                    <div class="dropdown-content">
+                        <a href="#">GYNAECOLOGY & OBSTETRIC CARE</a>
+                        <a href="#">PEDIATRIC CARE</a>
+                        <a href="#">PHYSIOTHERAPY</a>
+                        <a href="#">HYPNOBIRTHING</a>
+                        <a href="#">ANTENATAL CLASSES</a>
+                        <a href="#">RELATIONSHIP ENHANCEMENT PROGRAM</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <span class="dropbtn">LABOR SERVICES</span>
+                    <div class="dropdown-content">
+                        <a href="kick-count.html">BABY KICK COUNT CALCULATOR</a>
+                        <a href="contraction.html">CONTRACTION CALCULATOR</a>
+                        <a href="am-i-in-labor.html">AM I IN LABOR?</a>
+                    </div>
+                </div>
+                <a href="#">FAQS</a>
+                <a href="#">EMERGENCY!</a>
+            </nav>
+        </div>
+        <div class="header-right">
+            <a href="#" class="header-btn">BOOK AN APPOINTMENT</a>
+        </div>
+    </header>
+
+    <div class="labor-service-container">
+        <h1>🤰 Am I In Labor?</h1>
+        <form id="laborForm">
+            <div class="question">
+                <label>Has your water broken? (Did you notice a gush or trickle of fluid?)<br>
+                    <input type="radio" name="preq1" value="yes"> Yes
+                    <input type="radio" name="preq1" value="no"> No
+                </label>
+            </div>
+            <div class="question">
+                <label>Are you feeling intense pressure or the urge to push?<br>
+                    <input type="radio" name="preq2" value="yes"> Yes
+                    <input type="radio" name="preq2" value="no"> No
+                </label>
+            </div>
+            <div class="question">
+                <label>1. Are you experiencing regular contractions that are getting stronger and closer together?<br>
+                    <input type="radio" name="q1" value="yes"> Yes
+                    <input type="radio" name="q1" value="no"> No
+                </label>
+            </div>
+            <div class="question">
+                <label>2. Do the contractions persist even when you change positions or rest?<br>
+                    <input type="radio" name="q2" value="yes"> Yes
+                    <input type="radio" name="q2" value="no"> No
+                </label>
+            </div>
+            <div class="question">
+                <label>3. Are you having lower back pain or cramping that doesn't go away?<br>
+                    <input type="radio" name="q3" value="yes"> Yes
+                    <input type="radio" name="q3" value="no"> No
+                </label>
+            </div>
+            <div class="question">
+                <label>4. Have you noticed any bloody discharge or mucus (bloody show)?<br>
+                    <input type="radio" name="q4" value="yes"> Yes
+                    <input type="radio" name="q4" value="no"> No
+                </label>
+            </div>
+            <div class="question">
+                <label>5. Is this your due date or beyond?<br>
+                    <input type="radio" name="q5" value="yes"> Yes
+                    <input type="radio" name="q5" value="no"> No
+                </label>
+            </div>
+            <button type="button" onclick="checkLabor()" class="submit-btn">Check</button>
+        </form>
+        <div id="result"></div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-cta-row">
+            <button class="footer-cta">BOOK YOUR APPOINTMENT ONLINE</button>
+        </div>
+        <div class="footer-content">
+            <div class="footer-left">
+                <div class="footer-contact">
+                    <h3>Le Nest Hospital</h3>
+                    <p>Laxmi palace,Opp Sunder Nagar<br>
+                        Off S V Road, Near Witty International School<br>
+                        Malad W, Mumbai 400064</p>
+                    <p><strong>Phone:</strong><br>
+                        +91 7045340141<br>
+                        +91 8104516661 </p>
+                    <p><strong>Email:</strong><br>
+                        lenest.india@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-right">
+                <h3>Hours:</h3>
+                <p>Monday 8am–4pm<br>
+                    Tuesday 8am–4pm<br>
+                    Wednesday 8am–4pm<br>
+                    Thursday 8am–4pm<br>
+                    Friday 8am–4pm<br>
+                    Saturday Closed<br>
+                    Sunday Closed</p>
+            </div>
+        </div>
+        <div class="footer-social">
+            <a href="#"><img src="../images/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="../images/twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="../images/youtube.png" alt="Youtube"></a>
+        </div>
+        <div class="footer-links">
+            <a href="#">INSURANCE OPTIONS</a>
+            <a href="#">NEWS</a>
+            <a href="#">PLANS</a>
+        </div>
+    </footer>
+
+    <script src="am-i-in-labor.js"></script>
+</body>
+</html>
