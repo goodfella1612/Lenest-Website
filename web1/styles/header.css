@@ -3,7 +3,7 @@
     justify-content: space-between;
     align-items: flex-start;
     padding: 24px 40px;
-    background: #2d5a4a;
+    background: #fff;
     font-family: Arial, sans-serif;
 }
 
@@ -19,7 +19,7 @@
 
 .main-nav a {
     margin-right: 24px;
-    color: #fff;
+    color: #333;
     text-decoration: none;
     letter-spacing: 2px;
     font-size: 15px;
@@ -36,7 +36,7 @@
 }
 
 .dropbtn {
-  color: #fff;
+  color: #222;
   font-size: 15px;
   font-weight: 400;
   letter-spacing: 2px;
