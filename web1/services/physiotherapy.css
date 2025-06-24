@@ -1,0 +1,120 @@
+
+.service-hero {
+    background: linear-gradient(rgba(45, 90, 74, 0.8), rgba(45, 90, 74, 0.8)), url('../images/hero-doctor-patient.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    text-align: center;
+    color: white;
+}
+
+.service-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.service-hero p {
+    font-size: 1.3rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.service-content {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.content-text h2 {
+    color: #2d5a4a;
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    margin-top: 40px;
+    font-weight: 700;
+}
+
+.content-text p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.service-list {
+    margin-bottom: 40px;
+}
+
+.service-item {
+    background: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+}
+
+.service-item h3 {
+    color: #2d5a4a;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.service-item p {
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.benefits-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.benefits-list li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+    line-height: 1.6;
+    color: #666;
+}
+
+.benefits-list li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #96d2b0;
+    font-weight: bold;
+}
+
+.content-image {
+    text-align: center;
+}
+
+.content-image img {
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .service-hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .service-hero p {
+        font-size: 1.1rem;
+    }
+}

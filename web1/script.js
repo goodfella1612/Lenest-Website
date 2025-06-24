@@ -15,9 +15,11 @@ document.addEventListener('DOMContentLoaded', function() {
         const gap = parseInt(style.marginRight) || 20; // fallback to 20px
         const cardWidth = cards[0].offsetWidth + gap;
         track.style.transform = `translateX(-${currentSlide * cardWidth}px)`;
-        dots.forEach((dot, index) => {
-            dot.classList.toggle('active', index === currentSlide);
-        });
+        if (dots.length > 0) {
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+        }
     }
 
     // Dots click listeners
