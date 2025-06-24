@@ -33,4 +33,28 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initialize carousel
     updateCarousel();
+
+    // Scroll animation for about section
+    const aboutContent = document.querySelector('.about-content');
+    const aboutImage = document.querySelector('.about-image');
+
+    function checkScroll() {
+        if (aboutContent && aboutImage) {
+            const aboutSection = document.querySelector('.about-section');
+            const sectionTop = aboutSection.offsetTop;
+            const sectionHeight = aboutSection.offsetHeight;
+            const scrollPosition = window.pageYOffset;
+            const windowHeight = window.innerHeight;
+
+            // Trigger animation when section is 20% visible
+            if (scrollPosition + windowHeight > sectionTop + (sectionHeight * 0.2)) {
+                aboutContent.classList.add('animate');
+                aboutImage.classList.add('animate');
+            }
+        }
+    }
+
+    // Check scroll position on load and scroll
+    window.addEventListener('scroll', checkScroll);
+    checkScroll(); // Check initial position
 });

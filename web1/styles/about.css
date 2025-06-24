@@ -17,16 +17,38 @@
     color: #2d5a4a;
     margin-bottom: 20px;
     font-weight: 700;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease, transform 1s ease;
 }
 
 .about-content p {
     font-size: 1.1rem;
     margin-bottom: 20px;
     color: #666;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.about-content p:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.about-content p:nth-child(3) {
+    transition-delay: 0.4s;
+}
+
+.about-content p:nth-child(4) {
+    transition-delay: 0.6s;
 }
 
 .about-image {
     text-align: center;
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 1s ease, transform 1s ease;
+    transition-delay: 0.3s;
 }
 
 .about-image img {
@@ -35,4 +57,16 @@
     height: auto;
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Animation classes */
+.about-content.animate h2,
+.about-content.animate p,
+.about-image.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.about-image.animate {
+    transform: translateX(0);
 }
