@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/header.css">
     <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/carousel.css">
     <link rel="stylesheet" href="gynaecology.css">
 </head>
 <body>
@@ -15,6 +16,7 @@
         <div class="header-left">
             <img src="../images/lenest_logo.png" alt="Le Nest" class="logo">
             <nav class="main-nav">
+                <a href="../index.html">HOME</a>
                 <a href="../index.html#about">PATIENT INFO</a>
                 <a href="../location/location.html">LOCATION</a>
                 <div class="dropdown">
@@ -58,27 +60,53 @@
                 <div class="content-text">
                     <p>At Le Nest, we are dedicated to supporting women's health at every stage of life, from adolescence through motherhood and beyond. Our experienced team offers personalized, compassionate care using the latest medical technology.</p>
 
-                    <h2>Our Services</h2>
-                    
-                    <div class="service-category">
-                        <h3>Gynaecology</h3>
-                        <ul>
-                            <li><strong>Annual Well-Woman Exams:</strong> Regular checkups, breast and pelvic exams, and preventive screenings for cancers and infections.</li>
-                            <li><strong>Menstrual & Hormonal Health:</strong> Diagnosis and treatment of menstrual disorders, menopause symptoms, and hormonal imbalances.</li>
-                            <li><strong>Family Planning:</strong> Birth control counseling, fertility assessments, and preconception care.</li>
-                            <li><strong>Gynecological Conditions:</strong> Management of fibroids, ovarian cysts, endometriosis, and reproductive infections.</li>
-                            <li><strong>Minimally Invasive Surgery:</strong> Advanced laparoscopic procedures for faster recovery and less discomfort.</li>
-                        </ul>
-                    </div>
-
-                    <div class="service-category">
-                        <h3>Pregnancy & Maternity Care</h3>
-                        <ul>
-                            <li><strong>Prenatal Care:</strong> Comprehensive checkups, ultrasounds, and education to ensure a healthy pregnancy for mother and baby.</li>
-                            <li><strong>Labor & Delivery:</strong> Safe, supportive birthing options with expert obstetricians and midwives.</li>
-                            <li><strong>Postpartum Support:</strong> Ongoing care after birth, including physical recovery, emotional well-being, breastfeeding support, and family planning guidance.</li>
-                        </ul>
-                    </div>
+                    <section class="carousel-section">
+                        <div class="carousel-container">
+                            <h2 class="carousel-title">Our Services</h2>
+                            <div class="carousel-wrapper">
+                                <div class="carousel-track" id="carouselTrack">
+                                    <div class="carousel-card">
+                                        <div class="card-icon">👩‍⚕️</div>
+                                        <h3 class="card-title">Annual Well-Woman Exams</h3>
+                                        <p class="card-description">Regular checkups, breast and pelvic exams, and preventive screenings for cancers and infections.</p>
+                                    </div>
+                                    <div class="carousel-card">
+                                        <div class="card-icon">🌸</div>
+                                        <h3 class="card-title">Menstrual & Hormonal Health</h3>
+                                        <p class="card-description">Diagnosis and treatment of menstrual disorders, menopause symptoms, and hormonal imbalances.</p>
+                                    </div>
+                                    <div class="carousel-card">
+                                        <div class="card-icon">👶</div>
+                                        <h3 class="card-title">Family Planning</h3>
+                                        <p class="card-description">Birth control counseling, fertility assessments, and preconception care.</p>
+                                    </div>
+                                    <div class="carousel-card">
+                                        <div class="card-icon">🔬</div>
+                                        <h3 class="card-title">Gynecological Conditions</h3>
+                                        <p class="card-description">Management of fibroids, ovarian cysts, endometriosis, and reproductive infections.</p>
+                                    </div>
+                                    <div class="carousel-card">
+                                        <div class="card-icon">⚕️</div>
+                                        <h3 class="card-title">Minimally Invasive Surgery</h3>
+                                        <p class="card-description">Advanced laparoscopic procedures for faster recovery and less discomfort.</p>
+                                    </div>
+                                    <div class="carousel-card">
+                                        <div class="card-icon">🤱</div>
+                                        <h3 class="card-title">Pregnancy & Maternity Care</h3>
+                                        <p class="card-description">Comprehensive prenatal care, safe delivery options, and postpartum support.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-controls">
+                                <div class="carousel-dot active"></div>
+                                <div class="carousel-dot"></div>
+                                <div class="carousel-dot"></div>
+                                <div class="carousel-dot"></div>
+                                <div class="carousel-dot"></div>
+                                <div class="carousel-dot"></div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
                 <div class="content-image">
                     <img src="../images/green_woman.png" alt="Women's Health Care" />
@@ -127,5 +155,7 @@
             <a href="#">PLANS</a>
         </div>
     </footer>
+
+    <script src="../script.js"></script>
 </body>
 </html>

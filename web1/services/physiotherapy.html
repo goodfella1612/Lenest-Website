@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/header.css">
     <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/carousel.css">
     <link rel="stylesheet" href="physiotherapy.css">
 </head>
 <body>
@@ -15,6 +16,7 @@
         <div class="header-left">
             <img src="../images/lenest_logo.png" alt="Le Nest" class="logo">
             <nav class="main-nav">
+                <a href="../index.html">HOME</a>
                 <a href="../index.html#about">PATIENT INFO</a>
                 <a href="../location/location.html">LOCATION</a>
                 <div class="dropdown">
@@ -56,44 +58,59 @@
         <div class="container">
             <div class="content-grid">
                 <div class="content-text">
-                    <h2>Our Physiotherapy Services</h2>
-                    
-                    <div class="service-list">
-                        <div class="service-item">
-                            <h3>Musculoskeletal Rehabilitation</h3>
-                            <p>Treatment for back pain, joint problems, sports injuries, and muscle strains.</p>
+                    <section class="carousel-section">
+                        <div class="carousel-container">
+                            <h2 class="carousel-title">Our Physiotherapy Services</h2>
+                            <div class="carousel-wrapper">
+                                <div class="carousel-track" id="carouselTrack">
+                                    <div class="carousel-card">
+                                        <div class="card-icon">🦴</div>
+                                        <h3 class="card-title">Musculoskeletal Rehabilitation</h3>
+                                        <p class="card-description">Treatment for back pain, joint problems, sports injuries, and muscle strains.</p>
+                                    </div>
+                                    <div class="carousel-card">
+                                        <div class="card-icon">⚕️</div>
+                                        <h3 class="card-title">Post-Surgical Recovery</h3>
+                                        <p class="card-description">Guided exercises and therapies to restore function and strength after surgery.</p>
+                                    </div>
+                                    <div class="carousel-card">
+                                        <div class="card-icon">🧠</div>
+                                        <h3 class="card-title">Neurological Rehabilitation</h3>
+                                        <p class="card-description">Support for patients with stroke, Parkinson's disease, or nerve injuries to improve movement and coordination.</p>
+                                    </div>
+                                    <div class="carousel-card">
+                                        <div class="card-icon">👶</div>
+                                        <h3 class="card-title">Pediatric Physiotherapy</h3>
+                                        <p class="card-description">Gentle, effective therapies for children with developmental, neurological, or orthopedic concerns.</p>
+                                    </div>
+                                    <div class="carousel-card">
+                                        <div class="card-icon">🧓</div>
+                                        <h3 class="card-title">Geriatric Physiotherapy</h3>
+                                        <p class="card-description">Specialized care to help older adults maintain independence, balance, and mobility.</p>
+                                    </div>
+                                    <div class="carousel-card">
+                                        <div class="card-icon">💊</div>
+                                        <h3 class="card-title">Pain Management</h3>
+                                        <p class="card-description">Techniques to reduce chronic pain and improve daily comfort.</p>
+                                    </div>
+                                    <div class="carousel-card">
+                                        <div class="card-icon">📚</div>
+                                        <h3 class="card-title">Education & Prevention</h3>
+                                        <p class="card-description">Guidance on posture, ergonomics, and exercises to prevent future injuries.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-controls">
+                                <div class="carousel-dot active"></div>
+                                <div class="carousel-dot"></div>
+                                <div class="carousel-dot"></div>
+                                <div class="carousel-dot"></div>
+                                <div class="carousel-dot"></div>
+                                <div class="carousel-dot"></div>
+                                <div class="carousel-dot"></div>
+                            </div>
                         </div>
-
-                        <div class="service-item">
-                            <h3>Post-Surgical Recovery</h3>
-                            <p>Guided exercises and therapies to restore function and strength after surgery.</p>
-                        </div>
-
-                        <div class="service-item">
-                            <h3>Neurological Rehabilitation</h3>
-                            <p>Support for patients with stroke, Parkinson's disease, or nerve injuries to improve movement and coordination.</p>
-                        </div>
-
-                        <div class="service-item">
-                            <h3>Pediatric Physiotherapy</h3>
-                            <p>Gentle, effective therapies for children with developmental, neurological, or orthopedic concerns.</p>
-                        </div>
-
-                        <div class="service-item">
-                            <h3>Geriatric Physiotherapy</h3>
-                            <p>Specialized care to help older adults maintain independence, balance, and mobility.</p>
-                        </div>
-
-                        <div class="service-item">
-                            <h3>Pain Management</h3>
-                            <p>Techniques to reduce chronic pain and improve daily comfort.</p>
-                        </div>
-
-                        <div class="service-item">
-                            <h3>Education & Prevention</h3>
-                            <p>Guidance on posture, ergonomics, and exercises to prevent future injuries.</p>
-                        </div>
-                    </div>
+                    </section>
 
                     <h2>Why Choose Le Nest for Physiotherapy?</h2>
                     <ul class="benefits-list">
@@ -153,5 +170,7 @@
             <a href="#">PLANS</a>
         </div>
     </footer>
+
+    <script src="../script.js"></script>
 </body>
 </html>

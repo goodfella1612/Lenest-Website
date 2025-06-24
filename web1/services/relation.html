@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/header.css">
     <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/carousel.css">
     <link rel="stylesheet" href="relation.css">
 </head>
 <body>
@@ -15,6 +16,7 @@
         <div class="header-left">
             <img src="../images/lenest_logo.png" alt="Le Nest" class="logo">
             <nav class="main-nav">
+                <a href="../index.html">HOME</a>
                 <a href="../index.html#about">PATIENT INFO</a>
                 <a href="../location/location.html">LOCATION</a>
                 <div class="dropdown">
@@ -58,34 +60,47 @@
                 <div class="content-text">
                     <p>At Le Nest, we understand that healthy relationships are the foundation of a happy family and overall well-being. Our relationship enhancement programs are designed to support couples and families in building stronger connections, improving communication, and resolving conflicts in a safe, supportive environment.</p>
 
-                    <h2>Our Relationship Enhancement Services</h2>
-                    
-                    <div class="service-list">
-                        <div class="service-item">
-                            <h3>Couples Counseling</h3>
-                            <p>Professional guidance to improve understanding, trust, and intimacy between partners.</p>
+                    <section class="carousel-section">
+                        <div class="carousel-container">
+                            <h2 class="carousel-title">Our Relationship Enhancement Services</h2>
+                            <div class="carousel-wrapper">
+                                <div class="carousel-track" id="carouselTrack">
+                                    <div class="carousel-card">
+                                        <div class="card-icon">💏</div>
+                                        <h3 class="card-title">Couples Counseling</h3>
+                                        <p class="card-description">Professional guidance to improve understanding, trust, and intimacy between partners.</p>
+                                    </div>
+                                    <div class="carousel-card">
+                                        <div class="card-icon">👨‍👩‍👧‍👦</div>
+                                        <h3 class="card-title">Family Therapy</h3>
+                                        <p class="card-description">Support for families facing challenges, helping to foster empathy and positive interactions.</p>
+                                    </div>
+                                    <div class="carousel-card">
+                                        <div class="card-icon">💬</div>
+                                        <h3 class="card-title">Communication Skills Workshops</h3>
+                                        <p class="card-description">Practical sessions to develop effective listening, expression, and conflict resolution skills.</p>
+                                    </div>
+                                    <div class="carousel-card">
+                                        <div class="card-icon">👪</div>
+                                        <h3 class="card-title">Parenting Support</h3>
+                                        <p class="card-description">Advice and strategies to navigate parenting challenges together as a team.</p>
+                                    </div>
+                                    <div class="carousel-card">
+                                        <div class="card-icon">🧘</div>
+                                        <h3 class="card-title">Emotional Wellness</h3>
+                                        <p class="card-description">Tools to manage stress, strengthen resilience, and nurture a loving home environment.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-controls">
+                                <div class="carousel-dot active"></div>
+                                <div class="carousel-dot"></div>
+                                <div class="carousel-dot"></div>
+                                <div class="carousel-dot"></div>
+                                <div class="carousel-dot"></div>
+                            </div>
                         </div>
-
-                        <div class="service-item">
-                            <h3>Family Therapy</h3>
-                            <p>Support for families facing challenges, helping to foster empathy and positive interactions.</p>
-                        </div>
-
-                        <div class="service-item">
-                            <h3>Communication Skills Workshops</h3>
-                            <p>Practical sessions to develop effective listening, expression, and conflict resolution skills.</p>
-                        </div>
-
-                        <div class="service-item">
-                            <h3>Parenting Support</h3>
-                            <p>Advice and strategies to navigate parenting challenges together as a team.</p>
-                        </div>
-
-                        <div class="service-item">
-                            <h3>Emotional Wellness</h3>
-                            <p>Tools to manage stress, strengthen resilience, and nurture a loving home environment.</p>
-                        </div>
-                    </div>
+                    </section>
 
                     <h2>Why Choose Le Nest for Relationship Enhancement?</h2>
                     <ul class="benefits-list">
@@ -142,5 +157,7 @@
             <a href="#">PLANS</a>
         </div>
     </footer>
+
+    <script src="../script.js"></script>
 </body>
 </html>

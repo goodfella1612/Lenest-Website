@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/header.css">
     <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/carousel.css">
     <link rel="stylesheet" href="antenatal.css">
 </head>
 <body>
@@ -15,6 +16,7 @@
         <div class="header-left">
             <img src="../images/lenest_logo.png" alt="Le Nest" class="logo">
             <nav class="main-nav">
+                <a href="../index.html">HOME</a>
                 <a href="../index.html#about">PATIENT INFO</a>
                 <a href="../location/location.html">LOCATION</a>
                 <div class="dropdown">
@@ -58,34 +60,47 @@
                 <div class="content-text">
                     <p>Our antenatal classes at Le Nest are designed to empower expecting parents with the knowledge and skills needed for a healthy pregnancy, smooth delivery, and confident transition into parenthood. Led by experienced educators and healthcare professionals, these sessions offer practical guidance, emotional support, and a welcoming space to ask questions.</p>
 
-                    <h2>What Our Antenatal Classes Cover</h2>
-                    
-                    <div class="service-list">
-                        <div class="service-item">
-                            <h3>Pregnancy Wellness</h3>
-                            <p>Nutrition, exercise, and self-care tips for a healthy pregnancy.</p>
+                    <section class="carousel-section">
+                        <div class="carousel-container">
+                            <h2 class="carousel-title">What Our Antenatal Classes Cover</h2>
+                            <div class="carousel-wrapper">
+                                <div class="carousel-track" id="carouselTrack">
+                                    <div class="carousel-card">
+                                        <div class="card-icon">🥗</div>
+                                        <h3 class="card-title">Pregnancy Wellness</h3>
+                                        <p class="card-description">Nutrition, exercise, and self-care tips for a healthy pregnancy.</p>
+                                    </div>
+                                    <div class="carousel-card">
+                                        <div class="card-icon">👶</div>
+                                        <h3 class="card-title">Labor & Delivery Preparation</h3>
+                                        <p class="card-description">Understanding the stages of labor, pain management options, and birthing techniques.</p>
+                                    </div>
+                                    <div class="carousel-card">
+                                        <div class="card-icon">🍼</div>
+                                        <h3 class="card-title">Breastfeeding & Newborn Care</h3>
+                                        <p class="card-description">Guidance on feeding, bathing, and soothing your baby.</p>
+                                    </div>
+                                    <div class="carousel-card">
+                                        <div class="card-icon">💝</div>
+                                        <h3 class="card-title">Postpartum Support</h3>
+                                        <p class="card-description">Recovery tips, emotional health, and family adjustment.</p>
+                                    </div>
+                                    <div class="carousel-card">
+                                        <div class="card-icon">👫</div>
+                                        <h3 class="card-title">Partner Involvement</h3>
+                                        <p class="card-description">Encouraging support and shared experiences for both parents.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-controls">
+                                <div class="carousel-dot active"></div>
+                                <div class="carousel-dot"></div>
+                                <div class="carousel-dot"></div>
+                                <div class="carousel-dot"></div>
+                                <div class="carousel-dot"></div>
+                            </div>
                         </div>
-
-                        <div class="service-item">
-                            <h3>Labor & Delivery Preparation</h3>
-                            <p>Understanding the stages of labor, pain management options, and birthing techniques.</p>
-                        </div>
-
-                        <div class="service-item">
-                            <h3>Breastfeeding & Newborn Care</h3>
-                            <p>Guidance on feeding, bathing, and soothing your baby.</p>
-                        </div>
-
-                        <div class="service-item">
-                            <h3>Postpartum Support</h3>
-                            <p>Recovery tips, emotional health, and family adjustment.</p>
-                        </div>
-
-                        <div class="service-item">
-                            <h3>Partner Involvement</h3>
-                            <p>Encouraging support and shared experiences for both parents.</p>
-                        </div>
-                    </div>
+                    </section>
 
                     <h2>Why Attend Antenatal Classes at Le Nest?</h2>
                     <ul class="benefits-list">
@@ -134,7 +149,7 @@
         <div class="footer-social">
             <a href="#"><img src="../images/facebook.png" alt="Facebook"></a>
             <a href="#"><img src="../images/twitter.png" alt="Twitter"></a>
-            <a href="#"><img src="../images/youtube.png" alt="Youtube"></a>
+            <a href="#"><images/youtube.png" alt="Youtube"></a>
         </div>
         <div class="footer-links">
             <a href="#">INSURANCE OPTIONS</a>
@@ -142,5 +157,7 @@
             <a href="#">PLANS</a>
         </div>
     </footer>
+
+    <script src="../script.js"></script>
 </body>
 </html>

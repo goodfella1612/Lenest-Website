@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/header.css">
     <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/carousel.css">
     <link rel="stylesheet" href="lapro.css">
 </head>
 <body>
@@ -15,6 +16,7 @@
         <div class="header-left">
             <img src="../images/lenest_logo.png" alt="Le Nest" class="logo">
             <nav class="main-nav">
+                <a href="../index.html">HOME</a>
                 <a href="../index.html#about">PATIENT INFO</a>
                 <a href="../location/location.html">LOCATION</a>
                 <div class="dropdown">
@@ -58,29 +60,41 @@
                 <div class="content-text">
                     <p>At Le Nest, we offer state-of-the-art laparoscopic (keyhole) surgery for a variety of conditions, providing patients with a safer, less invasive alternative to traditional open surgery. Our skilled surgeons use specialized instruments and cameras to perform precise procedures through tiny incisions, resulting in faster recovery, less pain, and minimal scarring.</p>
 
-                    <h2>Our Laparoscopic Services</h2>
-                    
-                    <div class="service-list">
-                        <div class="service-item">
-                            <h3>Gynaecological Laparoscopy</h3>
-                            <p>Diagnosis and treatment of fibroids, ovarian cysts, endometriosis, and infertility.</p>
+                    <section class="carousel-section">
+                        <div class="carousel-container">
+                            <h2 class="carousel-title">Our Laparoscopic Services</h2>
+                            <div class="carousel-wrapper">
+                                <div class="carousel-track" id="carouselTrack">
+                                    <div class="carousel-card">
+                                        <div class="card-icon">🔬</div>
+                                        <h3 class="card-title">Gynaecological Laparoscopy</h3>
+                                        <p class="card-description">Diagnosis and treatment of fibroids, ovarian cysts, endometriosis, and infertility.</p>
+                                    </div>
+                                    <div class="carousel-card">
+                                        <div class="card-icon">⚕️</div>
+                                        <h3 class="card-title">General Surgery</h3>
+                                        <p class="card-description">Gallbladder removal, appendectomy, hernia repair, and more.</p>
+                                    </div>
+                                    <div class="carousel-card">
+                                        <div class="card-icon">🏥</div>
+                                        <h3 class="card-title">Shorter Hospital Stay</h3>
+                                        <p class="card-description">Most procedures are done as day-care or require minimal hospitalization.</p>
+                                    </div>
+                                    <div class="carousel-card">
+                                        <div class="card-icon">⚡</div>
+                                        <h3 class="card-title">Quick Recovery</h3>
+                                        <p class="card-description">Return to normal activities sooner with less discomfort.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-controls">
+                                <div class="carousel-dot active"></div>
+                                <div class="carousel-dot"></div>
+                                <div class="carousel-dot"></div>
+                                <div class="carousel-dot"></div>
+                            </div>
                         </div>
-
-                        <div class="service-item">
-                            <h3>General Surgery</h3>
-                            <p>Gallbladder removal, appendectomy, hernia repair, and more.</p>
-                        </div>
-
-                        <div class="service-item">
-                            <h3>Shorter Hospital Stay</h3>
-                            <p>Most procedures are done as day-care or require minimal hospitalization.</p>
-                        </div>
-
-                        <div class="service-item">
-                            <h3>Quick Recovery</h3>
-                            <p>Return to normal activities sooner with less discomfort.</p>
-                        </div>
-                    </div>
+                    </section>
 
                     <h2>Why Choose Laparoscopy at Le Nest?</h2>
                     <ul class="benefits-list">
@@ -137,5 +151,7 @@
             <a href="#">PLANS</a>
         </div>
     </footer>
+
+    <script src="../script.js"></script>
 </body>
 </html>
