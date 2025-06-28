@@ -70,3 +70,48 @@
 .about-image.animate {
     transform: translateX(0);
 }
+
+/* Responsive breakpoints */
+@media (max-width: 768px) {
+    .about-section {
+        padding: 60px 0;
+    }
+    
+    .about-grid {
+        gap: 40px;
+    }
+    
+    .about-content h2 {
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    .about-content p {
+        font-size: 1rem;
+        text-align: center;
+    }
+    
+    .about-image {
+        order: -1;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-section {
+        padding: 40px 0;
+    }
+    
+    .about-grid {
+        gap: 30px;
+    }
+    
+    .about-content h2 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+    
+    .about-content p {
+        font-size: 0.95rem;
+        margin-bottom: 15px;
+    }
+}

@@ -122,4 +122,80 @@ document.addEventListener('DOMContentLoaded', function() {
 
     window.addEventListener('scroll', checkScroll);
     checkScroll(); // Initial check on load
+
+    // === SERVICES CAROUSEL ===
+    const servicesTrack = document.getElementById('servicesCarouselTrack');
+    const servicesDots = document.querySelectorAll('.services-carousel-dot');
+    const servicesCards = document.querySelectorAll('#servicesCarouselTrack .service-card');
+    let currentServicesSlide = 0;
+
+    function updateServicesCarousel() {
+        if (!servicesTrack || servicesCards.length === 0) return;
+        const cardWidth = servicesCards[0].offsetWidth + 20;
+        servicesTrack.style.transform = `translateX(-${currentServicesSlide * cardWidth}px)`;
+        
+        servicesDots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentServicesSlide);
+        });
+    }
+
+    if (servicesDots.length && servicesCards.length) {
+        servicesDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentServicesSlide = index;
+                updateServicesCarousel();
+            });
+        });
+
+        // Auto-slide for services
+        setInterval(() => {
+            if (window.innerWidth <= 768) {
+                currentServicesSlide = (currentServicesSlide + 1) % servicesCards.length;
+                updateServicesCarousel();
+            }
+        }, 4000);
+    }
+
+    // === TESTIMONIALS CAROUSEL ===
+    const testimonialsTrack = document.getElementById('testimonialsCarouselTrack');
+    const testimonialsDots = document.querySelectorAll('.testimonials-carousel-dot');
+    const testimonialsCards = document.querySelectorAll('#testimonialsCarouselTrack .testimonial-card');
+    let currentTestimonialsSlide = 0;
+
+    function updateTestimonialsCarousel() {
+        if (!testimonialsTrack || testimonialsCards.length === 0) return;
+        const cardWidth = testimonialsCards[0].offsetWidth + 20;
+        testimonialsTrack.style.transform = `translateX(-${currentTestimonialsSlide * cardWidth}px)`;
+        
+        testimonialsDots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentTestimonialsSlide);
+        });
+    }
+
+    if (testimonialsDots.length && testimonialsCards.length) {
+        testimonialsDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentTestimonialsSlide = index;
+                updateTestimonialsCarousel();
+            });
+        });
+
+        // Auto-slide for testimonials
+        setInterval(() => {
+            if (window.innerWidth <= 768) {
+                currentTestimonialsSlide = (currentTestimonialsSlide + 1) % testimonialsCards.length;
+                updateTestimonialsCarousel();
+            }
+        }, 5000);
+    }
+
+    // Initialize carousels
+    updateServicesCarousel();
+    updateTestimonialsCarousel();
+
+    // Update carousels on window resize
+    window.addEventListener('resize', () => {
+        updateServicesCarousel();
+        updateTestimonialsCarousel();
+    });
 });

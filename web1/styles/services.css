@@ -59,3 +59,91 @@
     color: #666;
     line-height: 1.6;
 }
+
+/* Mobile carousel styles */
+.services-carousel-wrapper {
+    display: none;
+    position: relative;
+    overflow: hidden;
+    margin-top: 40px;
+}
+
+.services-carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 20px;
+}
+
+.services-carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.services-carousel-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.services-carousel-dot.active {
+    background: #fff;
+}
+
+@media (max-width: 768px) {
+    .services-section {
+        padding: 60px 0;
+    }
+    
+    .services-section h2 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+    
+    .services-grid {
+        display: none;
+    }
+    
+    .services-carousel-wrapper {
+        display: block;
+    }
+    
+    .service-card {
+        min-width: 280px;
+        padding: 30px 20px;
+        margin: 0 10px;
+    }
+    
+    .service-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+    
+    .service-card h3 {
+        font-size: 1.2rem;
+    }
+    
+    .service-card p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-section {
+        padding: 40px 0;
+    }
+    
+    .services-section h2 {
+        font-size: 1.8rem;
+    }
+    
+    .service-card {
+        min-width: 250px;
+        padding: 25px 15px;
+    }
+}
