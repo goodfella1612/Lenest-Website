@@ -21,11 +21,30 @@ body {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-    .hero-content h1 {
-        font-size: 2.5rem;
+@media (max-width: 900px) {
+    .about-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
     }
     
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
     .about-grid,
     .contact-grid {
         grid-template-columns: 1fr;
@@ -34,10 +53,12 @@ body {
     
     .services-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
     }
     
     .stats-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
     }
     
     .testimonials-grid {
@@ -54,21 +75,31 @@ body {
     .stats-section,
     .testimonials-section,
     .contact-section {
-        padding: 60px 0;
+        padding: 50px 0;
     }
 }
 
 @media (max-width: 480px) {
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-    
     .stats-grid {
         grid-template-columns: 1fr;
+        gap: 15px;
     }
     
     .contact-form {
-        padding: 20px;
+        padding: 15px;
+    }
+    
+    .hero-section,
+    .about-section,
+    .services-section,
+    .stats-section,
+    .testimonials-section,
+    .contact-section {
+        padding: 40px 0;
+    }
+    
+    .container {
+        padding: 0 10px;
     }
 }
 
