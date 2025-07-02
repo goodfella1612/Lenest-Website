@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -68,48 +69,237 @@
                     your health and wellness. These resources are carefully curated by our medical professionals.</p>
             </div>
 
-            <div class="resources-grid">
-                <div class="resource-category">
-                    <h3>Women's Health & Family Planning</h3>
-                    <div class="resource-items">
-                        <div class="resource-item">
-                            <div class="resource-icon">📋</div>
-                            <h4>Birth Control Methods</h4>
-                            <p>Comprehensive guide to different contraceptive options, their effectiveness, and how to
-                                choose the right method for you.</p>
-                            <a href="../PDFS/Birth Control Methods_1751448630936.pdf" target="_blank"
-                                class="resource-link">Download PDF</a>
-                        </div>
+            <!-- Search and Filter Section -->
+            <div class="search-filter-section">
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search health topics..." 
+                           onkeyup="filterResources()">
+                    <button onclick="clearSearch()">Clear</button>
+                </div>
+                <div class="filter-categories">
+                    <button class="filter-btn active" onclick="filterByCategory('all')">All Topics</button>
+                    <button class="filter-btn" onclick="filterByCategory('womens-health')">Women's Health</button>
+                    <button class="filter-btn" onclick="filterByCategory('mental-health')">Mental Health</button>
+                    <button class="filter-btn" onclick="filterByCategory('pregnancy')">Pregnancy & Birth</button>
+                    <button class="filter-btn" onclick="filterByCategory('fertility')">Fertility</button>
+                    <button class="filter-btn" onclick="filterByCategory('newborn')">Newborn Care</button>
+                </div>
+            </div>
+
+            <!-- Resources Grid -->
+            <div class="resources-grid" id="resourcesGrid">
+                <!-- Women's Health & Family Planning -->
+                <div class="resource-item" data-category="womens-health" 
+                     data-keywords="birth control contraception family planning methods">
+                    <div class="resource-icon">📋</div>
+                    <div class="resource-content">
+                        <h4>Birth Control Methods</h4>
+                        <p>Comprehensive guide to different contraceptive options, their effectiveness, and how to
+                            choose the right method for you.</p>
+                        <a href="../PDFS/Birth Control Methods_1751448630936.pdf" target="_blank"
+                            class="resource-link">Download PDF</a>
                     </div>
                 </div>
 
-                <div class="resource-category">
-                    <h3>Mental Health & Wellness</h3>
-                    <div class="resource-items">
-                        <div class="resource-item">
-                            <div class="resource-icon">🧠</div>
-                            <h4>Baby Blues vs Postpartum Depression</h4>
-                            <p>Understanding the difference between normal postpartum emotions and when to seek
-                                professional help.</p>
-                            <a href="../PDFS/baby blues vs Postpartum depression_1751448630937.pdf" target="_blank"    
-                                class="resource-link">Download PDF</a>
-                        </div>
+                <div class="resource-item" data-category="womens-health" 
+                     data-keywords="sexually transmitted diseases std sti infection">
+                    <div class="resource-icon">🩺</div>
+                    <div class="resource-content">
+                        <h4>Sexually Transmitted Diseases</h4>
+                        <p>Information about STDs, prevention methods, symptoms, and treatment options for sexual health.</p>
+                        <a href="#" target="_blank" class="resource-link">PDF Coming Soon</a>
                     </div>
                 </div>
 
-                <div class="resource-category">
-                    <h3>Health Education & Processes</h3>
-                    <div class="resource-items">
-                        <div class="resource-item">
-                            <div class="resource-icon">📚</div>
-                            <h4>Healthcare Process Guide</h4>
-                            <p>Visual guide to understanding healthcare processes and making informed decisions about
-                                your care.</p>
-                            <a href="../PDFS/
-                                target="_blank" class="resource-link">Download PDF</a>
-                        </div>
+                <div class="resource-item" data-category="womens-health" 
+                     data-keywords="dysmenorrhea menstrual pain periods cramps">
+                    <div class="resource-icon">💊</div>
+                    <div class="resource-content">
+                        <h4>Dysmenorrhea (Menstrual Pain)</h4>
+                        <p>Understanding menstrual pain, causes, and management strategies for painful periods.</p>
+                        <a href="#" target="_blank" class="resource-link">PDF Coming Soon</a>
                     </div>
                 </div>
+
+                <div class="resource-item" data-category="womens-health" 
+                     data-keywords="premenstrual syndrome pms symptoms management">
+                    <div class="resource-icon">📅</div>
+                    <div class="resource-content">
+                        <h4>Premenstrual Syndrome (PMS)</h4>
+                        <p>Guide to understanding PMS symptoms and effective management strategies.</p>
+                        <a href="#" target="_blank" class="resource-link">PDF Coming Soon</a>
+                    </div>
+                </div>
+
+                <div class="resource-item" data-category="womens-health" 
+                     data-keywords="ovarian cysts ovaries reproductive health">
+                    <div class="resource-icon">🫄</div>
+                    <div class="resource-content">
+                        <h4>Ovarian Cysts</h4>
+                        <p>Information about ovarian cysts, types, symptoms, and treatment options.</p>
+                        <a href="#" target="_blank" class="resource-link">PDF Coming Soon</a>
+                    </div>
+                </div>
+
+                <div class="resource-item" data-category="womens-health" 
+                     data-keywords="pelvic inflammatory disease pid infection">
+                    <div class="resource-icon">⚕️</div>
+                    <div class="resource-content">
+                        <h4>Pelvic Inflammatory Disease</h4>
+                        <p>Understanding PID, its causes, symptoms, and treatment approaches.</p>
+                        <a href="#" target="_blank" class="resource-link">PDF Coming Soon</a>
+                    </div>
+                </div>
+
+                <div class="resource-item" data-category="womens-health" 
+                     data-keywords="uterine fibroids uterus reproductive health">
+                    <div class="resource-icon">🩻</div>
+                    <div class="resource-content">
+                        <h4>Uterine Fibroids</h4>
+                        <p>Comprehensive information about uterine fibroids, symptoms, and treatment options.</p>
+                        <a href="#" target="_blank" class="resource-link">PDF Coming Soon</a>
+                    </div>
+                </div>
+
+                <div class="resource-item" data-category="womens-health" 
+                     data-keywords="hormone replacement therapy hrt menopause">
+                    <div class="resource-icon">💉</div>
+                    <div class="resource-content">
+                        <h4>Hormone Replacement Therapy</h4>
+                        <p>Guide to HRT, benefits, risks, and considerations for menopausal women.</p>
+                        <a href="#" target="_blank" class="resource-link">PDF Coming Soon</a>
+                    </div>
+                </div>
+
+                <div class="resource-item" data-category="womens-health" 
+                     data-keywords="ovulation menstrual cycle tracking fertility">
+                    <div class="resource-icon">📊</div>
+                    <div class="resource-content">
+                        <h4>Why Track Your Ovulation and Menstrual Cycle</h4>
+                        <p>Understanding the importance of cycle tracking for fertility and overall health.</p>
+                        <a href="#" target="_blank" class="resource-link">PDF Coming Soon</a>
+                    </div>
+                </div>
+
+                <!-- Mental Health & Wellness -->
+                <div class="resource-item" data-category="mental-health" 
+                     data-keywords="baby blues postpartum depression mental health">
+                    <div class="resource-icon">🧠</div>
+                    <div class="resource-content">
+                        <h4>Baby Blues vs Postpartum Depression</h4>
+                        <p>Understanding the difference between normal postpartum emotions and when to seek
+                            professional help.</p>
+                        <a href="../PDFS/baby blues vs Postpartum depression_1751448630937.pdf" target="_blank"    
+                            class="resource-link">Download PDF</a>
+                    </div>
+                </div>
+
+                <div class="resource-item" data-category="mental-health" 
+                     data-keywords="mental health fertility psychological support">
+                    <div class="resource-icon">💭</div>
+                    <div class="resource-content">
+                        <h4>Mental Health and Fertility</h4>
+                        <p>Understanding the connection between mental health and fertility, coping strategies.</p>
+                        <a href="#" target="_blank" class="resource-link">PDF Coming Soon</a>
+                    </div>
+                </div>
+
+                <!-- Pregnancy & Birth -->
+                <div class="resource-item" data-category="pregnancy" 
+                     data-keywords="gestational diabetes pregnancy blood sugar">
+                    <div class="resource-icon">🍎</div>
+                    <div class="resource-content">
+                        <h4>Gestational Diabetes</h4>
+                        <p>Information about gestational diabetes, management, and effects on pregnancy.</p>
+                        <a href="#" target="_blank" class="resource-link">PDF Coming Soon</a>
+                    </div>
+                </div>
+
+                <div class="resource-item" data-category="pregnancy" 
+                     data-keywords="birthing plan birth delivery preferences">
+                    <div class="resource-icon">📋</div>
+                    <div class="resource-content">
+                        <h4>Birthing Plan</h4>
+                        <p>Guide to creating your birthing plan and understanding your delivery options.</p>
+                        <a href="#" target="_blank" class="resource-link">PDF Coming Soon</a>
+                    </div>
+                </div>
+
+                <div class="resource-item" data-category="pregnancy" 
+                     data-keywords="preeclampsia pregnancy complications high blood pressure">
+                    <div class="resource-icon">🩸</div>
+                    <div class="resource-content">
+                        <h4>Preeclampsia</h4>
+                        <p>Understanding preeclampsia, symptoms, risks, and management during pregnancy.</p>
+                        <a href="#" target="_blank" class="resource-link">PDF Coming Soon</a>
+                    </div>
+                </div>
+
+                <div class="resource-item" data-category="pregnancy" 
+                     data-keywords="breastfeeding lactation nursing baby feeding">
+                    <div class="resource-icon">🤱</div>
+                    <div class="resource-content">
+                        <h4>Breastfeeding and Lactation Guidance</h4>
+                        <p>Comprehensive guide to breastfeeding, lactation support, and nursing techniques.</p>
+                        <a href="#" target="_blank" class="resource-link">PDF Coming Soon</a>
+                    </div>
+                </div>
+
+                <div class="resource-item" data-category="pregnancy" 
+                     data-keywords="postpartum recovery after birth healing">
+                    <div class="resource-icon">🌸</div>
+                    <div class="resource-content">
+                        <h4>Postpartum Recovery Guide</h4>
+                        <p>Essential information for postpartum recovery, healing, and adjusting to life with baby.</p>
+                        <a href="#" target="_blank" class="resource-link">PDF Coming Soon</a>
+                    </div>
+                </div>
+
+                <!-- Fertility -->
+                <div class="resource-item" data-category="fertility" 
+                     data-keywords="in vitro fertilization ivf assisted reproduction">
+                    <div class="resource-icon">🧪</div>
+                    <div class="resource-content">
+                        <h4>In Vitro Fertilization (IVF)</h4>
+                        <p>Comprehensive guide to IVF process, success rates, and what to expect.</p>
+                        <a href="#" target="_blank" class="resource-link">PDF Coming Soon</a>
+                    </div>
+                </div>
+
+                <div class="resource-item" data-category="fertility" 
+                     data-keywords="infertility conception fertility treatment">
+                    <div class="resource-icon">💔</div>
+                    <div class="resource-content">
+                        <h4>Infertility</h4>
+                        <p>Understanding infertility, causes, and available treatment options.</p>
+                        <a href="#" target="_blank" class="resource-link">PDF Coming Soon</a>
+                    </div>
+                </div>
+
+                <div class="resource-item" data-category="fertility" 
+                     data-keywords="intrauterine insemination iui fertility treatment">
+                    <div class="resource-icon">🏥</div>
+                    <div class="resource-content">
+                        <h4>Understanding Intrauterine Insemination (IUI)</h4>
+                        <p>Guide to IUI procedure, success rates, and what to expect during treatment.</p>
+                        <a href="#" target="_blank" class="resource-link">PDF Coming Soon</a>
+                    </div>
+                </div>
+
+                <!-- Newborn Care -->
+                <div class="resource-item" data-category="newborn" 
+                     data-keywords="newborn care basics baby care infant">
+                    <div class="resource-icon">👶</div>
+                    <div class="resource-content">
+                        <h4>Newborn Care Basics</h4>
+                        <p>Essential guide to caring for your newborn, feeding, sleeping, and development.</p>
+                        <a href="#" target="_blank" class="resource-link">PDF Coming Soon</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="no-results" id="noResults" style="display: none;">
+                <p>No resources found matching your search criteria.</p>
             </div>
 
             <div class="disclaimer">
@@ -162,7 +352,7 @@
         </div>
     </footer>
 
-    <script src="../script.js"></script>
+    <script src="health-library.js"></script>
 </body>
 
 </html>
