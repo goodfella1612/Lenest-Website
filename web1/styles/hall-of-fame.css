@@ -1,0 +1,267 @@
+
+/* Hall of Fame Section */
+.hall-of-fame-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f8fffe 0%, #e8f5f3 100%);
+}
+
+.hall-of-fame-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #2d5a4a;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.hall-of-fame-section p {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 50px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hall-of-fame-carousel-wrapper {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.hall-of-fame-carousel-track {
+    display: flex;
+    transition: transform 0.6s ease-in-out;
+}
+
+.hall-of-fame-slide {
+    min-width: 100%;
+    position: relative;
+}
+
+.hall-of-fame-slide img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.hall-of-fame-slide img:hover {
+    transform: scale(1.02);
+}
+
+.hall-of-fame-carousel-controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    pointer-events: none;
+}
+
+.carousel-btn {
+    background: rgba(45, 90, 74, 0.8);
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    pointer-events: all;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-btn:hover {
+    background: rgba(45, 90, 74, 1);
+    transform: scale(1.1);
+}
+
+.hall-of-fame-carousel-dots {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    gap: 10px;
+}
+
+.hall-of-fame-carousel-dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: rgba(45, 90, 74, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.hall-of-fame-carousel-dot.active,
+.hall-of-fame-carousel-dot:hover {
+    background: #2d5a4a;
+    transform: scale(1.2);
+}
+
+/* Gallery Modal */
+.gallery-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    animation: fadeIn 0.3s ease;
+}
+
+.gallery-content {
+    position: relative;
+    margin: auto;
+    padding: 20px;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery-close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.gallery-close:hover {
+    color: #ccc;
+}
+
+.gallery-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+#galleryImage {
+    max-width: 90%;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.gallery-btn {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-prev {
+    left: 20px;
+}
+
+.gallery-next {
+    right: 20px;
+}
+
+.gallery-btn:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.gallery-counter {
+    margin-top: 20px;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hall-of-fame-section {
+        padding: 60px 0;
+    }
+    
+    .hall-of-fame-section h2 {
+        font-size: 2rem;
+    }
+    
+    .hall-of-fame-slide img {
+        height: 300px;
+    }
+    
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+    
+    .hall-of-fame-carousel-controls {
+        padding: 0 10px;
+    }
+    
+    .gallery-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+    
+    .gallery-close {
+        font-size: 30px;
+        right: 20px;
+        top: 10px;
+    }
+    
+    #galleryImage {
+        max-width: 95%;
+        max-height: 70vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .hall-of-fame-slide img {
+        height: 250px;
+    }
+    
+    .carousel-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+    
+    .hall-of-fame-carousel-dot {
+        width: 12px;
+        height: 12px;
+    }
+}

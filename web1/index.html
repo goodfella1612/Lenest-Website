@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="styles/testimonials.css">
     <link rel="stylesheet" href="styles/contact.css">
     <link rel="stylesheet" href="styles/mission.css">
+    <link rel="stylesheet" href="styles/hall-of-fame.css">
 
     <title>Le Nest - Comprehensive Healthcare</title>
 </head>
@@ -267,6 +268,65 @@
             <a href="team.html" class="team-btn">MEET THE TEAM</a>
         </div>
     </section>
+
+    <!-- Hall of Fame Section -->
+    <section class="hall-of-fame-section">
+        <div class="container">
+            <h2>Hall of Fame</h2>
+            <p>Celebrating our precious moments and milestones</p>
+            
+            <div class="hall-of-fame-carousel-wrapper">
+                <div class="hall-of-fame-carousel-track" id="hallOfFameCarouselTrack">
+                    <!-- Add your images here - replace src with actual image paths -->
+                    <div class="hall-of-fame-slide">
+                        <img src="images/hall-of-fame-1.jpg" alt="Hall of Fame Image 1" onclick="openGallery(0)">
+                    </div>
+                    <div class="hall-of-fame-slide">
+                        <img src="images/hall-of-fame-2.jpg" alt="Hall of Fame Image 2" onclick="openGallery(1)">
+                    </div>
+                    <div class="hall-of-fame-slide">
+                        <img src="images/hall-of-fame-3.jpg" alt="Hall of Fame Image 3" onclick="openGallery(2)">
+                    </div>
+                    <div class="hall-of-fame-slide">
+                        <img src="images/hall-of-fame-4.jpg" alt="Hall of Fame Image 4" onclick="openGallery(3)">
+                    </div>
+                    <div class="hall-of-fame-slide">
+                        <img src="images/hall-of-fame-5.jpg" alt="Hall of Fame Image 5" onclick="openGallery(4)">
+                    </div>
+                    <!-- Add more images as needed -->
+                </div>
+                
+                <div class="hall-of-fame-carousel-controls">
+                    <button class="carousel-btn prev-btn" onclick="changeHallOfFameSlide(-1)">❮</button>
+                    <button class="carousel-btn next-btn" onclick="changeHallOfFameSlide(1)">❯</button>
+                </div>
+                
+                <div class="hall-of-fame-carousel-dots" id="hallOfFameCarouselDots">
+                    <div class="hall-of-fame-carousel-dot active" onclick="currentHallOfFameSlide(1)"></div>
+                    <div class="hall-of-fame-carousel-dot" onclick="currentHallOfFameSlide(2)"></div>
+                    <div class="hall-of-fame-carousel-dot" onclick="currentHallOfFameSlide(3)"></div>
+                    <div class="hall-of-fame-carousel-dot" onclick="currentHallOfFameSlide(4)"></div>
+                    <div class="hall-of-fame-carousel-dot" onclick="currentHallOfFameSlide(5)"></div>
+                    <!-- Add more dots as needed -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Gallery Modal -->
+    <div id="imageGalleryModal" class="gallery-modal">
+        <div class="gallery-content">
+            <span class="gallery-close" onclick="closeGallery()">&times;</span>
+            <div class="gallery-container">
+                <button class="gallery-btn gallery-prev" onclick="changeGalleryImage(-1)">❮</button>
+                <img id="galleryImage" src="" alt="Gallery Image">
+                <button class="gallery-btn gallery-next" onclick="changeGalleryImage(1)">❯</button>
+            </div>
+            <div class="gallery-counter">
+                <span id="galleryCounter">1 / 5</span>
+            </div>
+        </div>
+    </div>
 
     <!-- Contact Section -->
     <section class="contact-section">

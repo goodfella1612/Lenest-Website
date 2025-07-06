@@ -198,4 +198,150 @@ document.addEventListener('DOMContentLoaded', function() {
         updateServicesCarousel();
         updateTestimonialsCarousel();
     });
+
+    // === HALL OF FAME CAROUSEL ===
+    let currentHallOfFameSlideIndex = 0;
+    const hallOfFameImages = [
+        'images/hall-of-fame-1.jpg',
+        'images/hall-of-fame-2.jpg',
+        'images/hall-of-fame-3.jpg',
+        'images/hall-of-fame-4.jpg',
+        'images/hall-of-fame-5.jpg'
+        // Add more image paths as needed
+    ];
+
+    function updateHallOfFameCarousel() {
+        const track = document.getElementById('hallOfFameCarouselTrack');
+        const dots = document.querySelectorAll('.hall-of-fame-carousel-dot');
+        
+        if (track) {
+            track.style.transform = `translateX(-${currentHallOfFameSlideIndex * 100}%)`;
+        }
+        
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentHallOfFameSlideIndex);
+        });
+    }
+
+    // Auto-slide for Hall of Fame
+    setInterval(() => {
+        if (hallOfFameImages.length > 1) {
+            currentHallOfFameSlideIndex = (currentHallOfFameSlideIndex + 1) % hallOfFameImages.length;
+            updateHallOfFameCarousel();
+        }
+    }, 4000);
+
+    // Initialize Hall of Fame carousel
+    updateHallOfFameCarousel();
+});
+
+// Hall of Fame Carousel Functions (outside DOMContentLoaded for global access)
+function changeHallOfFameSlide(direction) {
+    const hallOfFameImages = [
+        'images/hall-of-fame-1.jpg',
+        'images/hall-of-fame-2.jpg',
+        'images/hall-of-fame-3.jpg',
+        'images/hall-of-fame-4.jpg',
+        'images/hall-of-fame-5.jpg'
+    ];
+    
+    currentHallOfFameSlideIndex += direction;
+    
+    if (currentHallOfFameSlideIndex >= hallOfFameImages.length) {
+        currentHallOfFameSlideIndex = 0;
+    }
+    if (currentHallOfFameSlideIndex < 0) {
+        currentHallOfFameSlideIndex = hallOfFameImages.length - 1;
+    }
+    
+    updateHallOfFameCarousel();
+}
+
+function currentHallOfFameSlide(n) {
+    currentHallOfFameSlideIndex = n - 1;
+    updateHallOfFameCarousel();
+}
+
+function updateHallOfFameCarousel() {
+    const track = document.getElementById('hallOfFameCarouselTrack');
+    const dots = document.querySelectorAll('.hall-of-fame-carousel-dot');
+    
+    if (track) {
+        track.style.transform = `translateX(-${currentHallOfFameSlideIndex * 100}%)`;
+    }
+    
+    dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentHallOfFameSlideIndex);
+    });
+}
+
+// Gallery Functions
+let currentGalleryIndex = 0;
+
+function openGallery(imageIndex) {
+    const hallOfFameImages = [
+        'images/hall-of-fame-1.jpg',
+        'images/hall-of-fame-2.jpg',
+        'images/hall-of-fame-3.jpg',
+        'images/hall-of-fame-4.jpg',
+        'images/hall-of-fame-5.jpg'
+    ];
+    
+    currentGalleryIndex = imageIndex;
+    const modal = document.getElementById('imageGalleryModal');
+    const galleryImage = document.getElementById('galleryImage');
+    const counter = document.getElementById('galleryCounter');
+    
+    modal.style.display = 'block';
+    galleryImage.src = hallOfFameImages[currentGalleryIndex];
+    counter.textContent = `${currentGalleryIndex + 1} / ${hallOfFameImages.length}`;
+    
+    // Prevent body scroll when modal is open
+    document.body.style.overflow = 'hidden';
+}
+
+function closeGallery() {
+    const modal = document.getElementById('imageGalleryModal');
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+}
+
+function changeGalleryImage(direction) {
+    const hallOfFameImages = [
+        'images/hall-of-fame-1.jpg',
+        'images/hall-of-fame-2.jpg',
+        'images/hall-of-fame-3.jpg',
+        'images/hall-of-fame-4.jpg',
+        'images/hall-of-fame-5.jpg'
+    ];
+    
+    currentGalleryIndex += direction;
+    
+    if (currentGalleryIndex >= hallOfFameImages.length) {
+        currentGalleryIndex = 0;
+    }
+    if (currentGalleryIndex < 0) {
+        currentGalleryIndex = hallOfFameImages.length - 1;
+    }
+    
+    const galleryImage = document.getElementById('galleryImage');
+    const counter = document.getElementById('galleryCounter');
+    
+    galleryImage.src = hallOfFameImages[currentGalleryIndex];
+    counter.textContent = `${currentGalleryIndex + 1} / ${hallOfFameImages.length}`;
+}
+
+// Close gallery when clicking outside the image
+document.addEventListener('click', function(event) {
+    const modal = document.getElementById('imageGalleryModal');
+    if (event.target === modal) {
+        closeGallery();
+    }
+});
+
+// Close gallery with Escape key
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        closeGallery();
+    }
 });
