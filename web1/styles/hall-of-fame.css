@@ -1,4 +1,3 @@
-
 /* Hall of Fame Section */
 .hall-of-fame-section {
     padding: 80px 0;
@@ -212,37 +211,37 @@
     .hall-of-fame-section {
         padding: 60px 0;
     }
-    
+
     .hall-of-fame-section h2 {
         font-size: 2rem;
     }
-    
+
     .hall-of-fame-slide img {
         height: 300px;
     }
-    
+
     .carousel-btn {
         width: 40px;
         height: 40px;
         font-size: 16px;
     }
-    
+
     .hall-of-fame-carousel-controls {
         padding: 0 10px;
     }
-    
+
     .gallery-btn {
         width: 50px;
         height: 50px;
         font-size: 20px;
     }
-    
+
     .gallery-close {
         font-size: 30px;
         right: 20px;
         top: 10px;
     }
-    
+
     #galleryImage {
         max-width: 95%;
         max-height: 70vh;
@@ -251,15 +250,15 @@
 
 @media (max-width: 480px) {
     .hall-of-fame-slide img {
-        height: 250px;
+        height: 200px;
     }
-    
+
     .carousel-btn {
         width: 35px;
         height: 35px;
         font-size: 14px;
     }
-    
+
     .hall-of-fame-carousel-dot {
         width: 12px;
         height: 12px;
