@@ -43,8 +43,9 @@
 
 .hall-of-fame-slide img {
     width: 100%;
-    height: 500px;
+    height: 700px;
     object-fit: cover;
+    object-position: center bottom;
     cursor: pointer;
     transition: transform 0.3s ease;
 }
@@ -217,7 +218,7 @@
     }
 
     .hall-of-fame-slide img {
-        height: 300px;
+        height: 500px;
     }
 
     .carousel-btn {
@@ -250,7 +251,7 @@
 
 @media (max-width: 480px) {
     .hall-of-fame-slide img {
-        height: 200px;
+        height: 400px;
     }
 
     .carousel-btn {

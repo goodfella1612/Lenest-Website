@@ -1,4 +1,7 @@
 
+// Declare global variables
+let currentHallOfFameSlideIndex = 0;
+
 document.addEventListener('DOMContentLoaded', function() {
     // === HAMBURGER MENU ===
     const hamburger = document.getElementById('hamburger');
@@ -200,7 +203,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // === HALL OF FAME CAROUSEL ===
-    let currentHallOfFameSlideIndex = 0;
     const hallOfFameImages = [
         'images/hall-of-fame-1.jpg',
         'images/hall-of-fame-2.jpg',
