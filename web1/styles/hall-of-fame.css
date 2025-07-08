@@ -43,15 +43,14 @@
 
 .hall-of-fame-slide img {
     width: 100%;
-    height: 1000px;
-    object-fit: cover;
-    object-position: center center;
+    height: 400px;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
     cursor: pointer;
-    transition: transform 0.5s ease;
-}
-
-.hall-of-fame-slide img:hover {
-    transform: scale(1.02);
+    background-color: #f8f9fa;
 }
 
 .hall-of-fame-carousel-controls {

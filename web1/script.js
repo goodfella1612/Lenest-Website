@@ -213,7 +213,20 @@ document.addEventListener('DOMContentLoaded', function() {
         'images/hall-of-fame-7.jpg',
         'images/hall-of-fame-8.jpg',
         'images/hall-of-fame-9.jpg',
-        'images/hall-of-fame-10.jpg'
+        'images/hall-of-fame-10.jpg',
+        'images/hall-of-fame-11.jpg',
+        'images/hall-of-fame-12.jpg',
+        'images/hall-of-fame-13.jpg',
+        'images/hall-of-fame-14.jpg',
+        'images/hall-of-fame-15.jpg',
+        'images/hall-of-fame-16.jpg',
+        'images/hall-of-fame-17.jpg',
+        'images/hall-of-fame-18.jpg',
+        'images/hall-of-fame-19.jpg',
+        'images/hall-of-fame-20.jpg',
+        'images/hall-of-fame-21.jpg',
+        'images/hall-of-fame-22.jpg',
+        'images/hall-of-fame-23.jpg'
     ];
 
     function updateHallOfFameCarousel() {
@@ -253,7 +266,20 @@ function changeHallOfFameSlide(direction) {
         'images/hall-of-fame-7.jpg',
         'images/hall-of-fame-8.jpg',
         'images/hall-of-fame-9.jpg',
-        'images/hall-of-fame-10.jpg'
+        'images/hall-of-fame-10.jpg',
+        'images/hall-of-fame-11.jpg',
+        'images/hall-of-fame-12.jpg',
+        'images/hall-of-fame-13.jpg',
+        'images/hall-of-fame-14.jpg',
+        'images/hall-of-fame-15.jpg',
+        'images/hall-of-fame-16.jpg',
+        'images/hall-of-fame-17.jpg',
+        'images/hall-of-fame-18.jpg',
+        'images/hall-of-fame-19.jpg',
+        'images/hall-of-fame-20.jpg',
+        'images/hall-of-fame-21.jpg',
+        'images/hall-of-fame-22.jpg',
+        'images/hall-of-fame-23.jpg'
     ];
     
     currentHallOfFameSlideIndex += direction;
