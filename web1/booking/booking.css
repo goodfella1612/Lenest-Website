@@ -1,0 +1,362 @@
+
+/* Booking Hero Section */
+.booking-hero {
+    background: linear-gradient(rgba(45, 90, 74, 0.8), rgba(45, 90, 74, 0.8)), 
+                url('../images/hero-doctor-patient.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 120px 0 80px;
+    text-align: center;
+    color: white;
+}
+
+.booking-hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.booking-hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Booking Section */
+.booking-section {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.doctors-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Doctor Card */
+.doctor-card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.doctor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Doctor Info Section */
+.doctor-info {
+    padding: 30px;
+    border-right: 1px solid #f0f0f0;
+}
+
+.doctor-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.doctor-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.doctor-name {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #2d5a4a;
+    margin-bottom: 8px;
+}
+
+.doctor-specialty {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+.doctor-experience {
+    font-size: 0.95rem;
+    color: #2d5a4a;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.doctor-qualification {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 20px;
+}
+
+/* Doctor Info Items */
+.doctor-info-items {
+    margin-bottom: 25px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.info-icon {
+    margin-right: 8px;
+    font-size: 1rem;
+}
+
+/* Call Button */
+.call-btn {
+    background: #2d5a4a;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+.call-btn:hover {
+    background: #234a3c;
+}
+
+/* Appointment Booking Section */
+.appointment-booking {
+    padding: 30px;
+    background: #fafafa;
+}
+
+.appointment-booking h4 {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #2d5a4a;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* Date Selection */
+.date-selection {
+    margin-bottom: 25px;
+}
+
+.date-grid {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.date-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px 8px;
+    border: 2px solid #e0e0e0;
+    background: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 50px;
+}
+
+.date-btn:hover {
+    border-color: #2d5a4a;
+    background: #f0f8f4;
+}
+
+.date-btn.active {
+    background: #2d5a4a;
+    border-color: #2d5a4a;
+    color: white;
+}
+
+.date-btn .day {
+    font-size: 0.75rem;
+    font-weight: 500;
+    margin-bottom: 2px;
+}
+
+.date-btn .date {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+/* Time Selection */
+.time-selection {
+    margin-bottom: 30px;
+}
+
+.time-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 8px;
+}
+
+.time-btn {
+    padding: 10px 12px;
+    border: 2px solid #e0e0e0;
+    background: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.time-btn:hover {
+    border-color: #2d5a4a;
+    background: #f0f8f4;
+}
+
+.time-btn.active {
+    background: #2d5a4a;
+    border-color: #2d5a4a;
+    color: white;
+}
+
+/* Book Appointment Button */
+.book-appointment-btn {
+    width: 100%;
+    background: #f9d71c;
+    color: #2d5a4a;
+    border: none;
+    padding: 16px 24px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+.book-appointment-btn:hover {
+    background: #f5d000;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(249, 215, 28, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .doctors-grid {
+        max-width: 800px;
+    }
+    
+    .doctor-card {
+        grid-template-columns: 1fr;
+    }
+    
+    .doctor-info {
+        border-right: none;
+        border-bottom: 1px solid #f0f0f0;
+    }
+}
+
+@media (max-width: 768px) {
+    .booking-hero {
+        padding: 100px 0 60px;
+    }
+    
+    .booking-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .booking-section {
+        padding: 60px 0;
+    }
+    
+    .doctors-grid {
+        gap: 30px;
+    }
+    
+    .doctor-info,
+    .appointment-booking {
+        padding: 25px 20px;
+    }
+    
+    .doctor-name {
+        font-size: 1.6rem;
+    }
+    
+    .date-grid {
+        justify-content: center;
+    }
+    
+    .time-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .booking-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .booking-hero p {
+        font-size: 1rem;
+    }
+    
+    .doctors-grid {
+        gap: 20px;
+    }
+    
+    .doctor-info,
+    .appointment-booking {
+        padding: 20px 15px;
+    }
+    
+    .doctor-image {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto 15px auto;
+    }
+    
+    .doctor-name {
+        font-size: 1.4rem;
+        text-align: center;
+    }
+    
+    .doctor-specialty,
+    .doctor-experience,
+    .doctor-qualification {
+        text-align: center;
+    }
+    
+    .date-btn {
+        min-width: 45px;
+        padding: 10px 6px;
+    }
+    
+    .time-grid {
+        grid-template-columns: 1fr;
+        gap: 6px;
+    }
+    
+    .call-btn {
+        width: 100%;
+        margin-top: 15px;
+    }
+}
+
+/* Navigation active state for booking page */
+.header-btn.active {
+    background: #f9d71c;
+    color: #2d5a4a;
+}
