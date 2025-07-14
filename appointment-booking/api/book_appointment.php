@@ -31,7 +31,19 @@ $success = $appointment->createAppointment(
 );
 
 if ($success) {
-    echo json_encode(['success' => true, 'message' => 'Appointment booked successfully!']);
+    // Mark the time slot as unavailable
+    try {
+        $stmt = $db->prepare("
+            UPDATE time_slots 
+            SET is_available = FALSE 
+            WHERE doctor_id = ? AND date = ? AND time_slot = ?
+        ");
+        $stmt->execute([$data['doctor_id'], $data['date'], $data['time']]);
+        
+        echo json_encode(['success' => true, 'message' => 'Appointment booked successfully!']);
+    } catch (PDOException $e) {
+        echo json_encode(['success' => false, 'message' => 'Booking confirmed but slot update failed']);
+    }
 } else {
     echo json_encode(['success' => false, 'message' => 'Failed to book appointment.']);
 }

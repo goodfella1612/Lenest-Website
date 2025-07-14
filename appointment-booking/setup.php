@@ -22,6 +22,18 @@ CREATE TABLE IF NOT EXISTS doctors (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 )";
 
+// Create time_slots table if it doesn't exist
+$createTimeSlotsTable = "
+CREATE TABLE IF NOT EXISTS time_slots (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    doctor_id INT NOT NULL,
+    date DATE NOT NULL,
+    time_slot TIME NOT NULL,
+    is_available BOOLEAN DEFAULT TRUE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (doctor_id) REFERENCES doctors(id)
+)";
+
 // Create appointments table if it doesn't exist
 $createAppointmentsTable = "
 CREATE TABLE IF NOT EXISTS appointments (
@@ -47,6 +59,7 @@ CREATE TABLE IF NOT EXISTS users (
 
 try {
     $db->exec($createDoctorsTable);
+    $db->exec($createTimeSlotsTable);
     $db->exec($createAppointmentsTable);
     $db->exec($createUsersTable);
     
@@ -62,6 +75,39 @@ try {
         $db->exec($insertDoctors);
     }
     
+    // Insert sample time slots if table is empty
+    $checkSlots = $db->query("SELECT COUNT(*) FROM time_slots")->fetchColumn();
+    
+    if ($checkSlots == 0) {
+        // Generate time slots for next 7 days for both doctors
+        $today = new DateTime();
+        for ($day = 0; $day < 7; $day++) {
+            $currentDate = clone $today;
+            $currentDate->add(new DateInterval("P{$day}D"));
+            $dateStr = $currentDate->format('Y-m-d');
+            
+            // Dr. Mukesh Gupta (doctor_id = 1) - 10:00 to 15:00
+            $startTime = new DateTime('10:00');
+            $endTime = new DateTime('15:00');
+            while ($startTime < $endTime) {
+                $timeStr = $startTime->format('H:i:s');
+                $insertSlot = "INSERT INTO time_slots (doctor_id, date, time_slot, is_available) VALUES (1, '$dateStr', '$timeStr', TRUE)";
+                $db->exec($insertSlot);
+                $startTime->add(new DateInterval('PT30M')); // Add 30 minutes
+            }
+            
+            // Dr. Amina (doctor_id = 2) - 09:00 to 14:00
+            $startTime = new DateTime('09:00');
+            $endTime = new DateTime('14:00');
+            while ($startTime < $endTime) {
+                $timeStr = $startTime->format('H:i:s');
+                $insertSlot = "INSERT INTO time_slots (doctor_id, date, time_slot, is_available) VALUES (2, '$dateStr', '$timeStr', TRUE)";
+                $db->exec($insertSlot);
+                $startTime->add(new DateInterval('PT30M')); // Add 30 minutes
+            }
+        }
+    }
+
     // Insert a sample user if table is empty
     $checkUsers = $db->query("SELECT COUNT(*) FROM users")->fetchColumn();
     

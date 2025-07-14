@@ -22,6 +22,11 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Add active class to clicked button
             this.classList.add('active');
+            
+            // Load available time slots for selected date and doctor
+            const doctorId = parentCard.dataset.doctorId;
+            const selectedDate = this.dataset.date;
+            loadAvailableSlots(doctorId, selectedDate, parentCard);
         });
     });
 
@@ -58,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             if (selectedDate && selectedTime) {
                 const dateValue = selectedDate.dataset.date;
-                const timeValue = selectedTime.textContent;
+                const timeValue = selectedTime.dataset.rawTime || selectedTime.textContent;
                 
                 // Book appointment via API
                 bookAppointment(doctorId, doctorName, dateValue, timeValue);
@@ -81,6 +86,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Update dates to show current week
     updateDatesToCurrentWeek();
+    
+    // Load initial time slots for default selected dates
+    document.querySelectorAll('.doctor-card').forEach(card => {
+        const doctorId = card.dataset.doctorId;
+        const activeDate = card.querySelector('.date-btn.active');
+        if (activeDate && doctorId) {
+            loadAvailableSlots(doctorId, activeDate.dataset.date, card);
+        }
+    });
 
     // Load doctors from backend API
     async function loadDoctorsFromAPI() {
@@ -153,6 +167,62 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 // Optional: Reset the form or redirect
                 // window.location.href = '../index.html';
+
+
+    // Load available time slots for a specific doctor and date
+    async function loadAvailableSlots(doctorId, date, parentCard) {
+        try {
+            const response = await fetch(`${API_BASE_URL}/available_slots.php?doctor_id=${doctorId}&date=${date}`);
+            const result = await response.json();
+            
+            if (result.success && result.slots) {
+                updateTimeSlots(parentCard, result.slots, result.raw_slots);
+            } else {
+                console.error('Failed to load available slots:', result.message);
+                // Show no slots available message
+                updateTimeSlots(parentCard, [], []);
+            }
+        } catch (error) {
+            console.error('Error loading available slots:', error);
+            // Keep default slots as fallback
+        }
+    }
+
+    // Update time slots in the UI
+    function updateTimeSlots(parentCard, formattedSlots, rawSlots) {
+        const timeGrid = parentCard.querySelector('.time-grid');
+        
+        if (formattedSlots.length === 0) {
+            timeGrid.innerHTML = '<p class="no-slots">No available slots for this date</p>';
+            return;
+        }
+        
+        // Clear existing time slots
+        timeGrid.innerHTML = '';
+        
+        // Add new time slots
+        formattedSlots.forEach((slot, index) => {
+            const timeBtn = document.createElement('button');
+            timeBtn.className = 'time-btn';
+            timeBtn.textContent = slot;
+            timeBtn.dataset.rawTime = rawSlots[index];
+            
+            // Add click event listener
+            timeBtn.addEventListener('click', function() {
+                const siblingTimes = parentCard.querySelectorAll('.time-btn');
+                siblingTimes.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+            });
+            
+            timeGrid.appendChild(timeBtn);
+        });
+        
+        // Select first slot by default
+        if (timeGrid.children.length > 0) {
+            timeGrid.children[0].classList.add('active');
+        }
+    }
+
             } else {
                 alert(`Failed to book appointment: ${result.message}\n\nPlease try again or contact us at +91 7045340141`);
             }
